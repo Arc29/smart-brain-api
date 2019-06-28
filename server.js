@@ -12,10 +12,8 @@ const app = express();
 var db = require('knex')({
     client: 'pg',
     connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: 'Arc293vms#',
-        database: 'testdb'
+        connectionString: process.env.DATABASE_URL,
+        ssl: true
     }
 });
 
