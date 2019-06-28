@@ -32,4 +32,4 @@ app.put('/image', image.handleImage(db))
 app.post('/imageAPI',image.handleAPI);
 app.post('/profile/:id',profile.changePass(db))
 
-app.listen(3000);
+app.listen(process.env.PORT||3000,console.log('watching on port '+(process.env.PORT||3000)));
